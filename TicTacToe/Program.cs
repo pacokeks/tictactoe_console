@@ -22,6 +22,8 @@ namespace TicTacToe
                 // show the board state
                 ShowBoard();
 
+                ChangePlayer();
+
                 // player move
                 GetPlayerMove();
 
@@ -85,7 +87,17 @@ namespace TicTacToe
             
             static void ChangePlayer()
             {
-                throw new NotImplementedException();
+                Console.WriteLine($"CurrentPlayer: {currentPlayer}");
+                if (currentPlayer == 'X')
+                {
+                    currentPlayer = 'O';
+                    Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}");
+                }
+                else
+                {
+                    currentPlayer = 'X';
+                    Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}");
+                }
             }
 
             
