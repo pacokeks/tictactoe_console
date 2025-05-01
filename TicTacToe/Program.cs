@@ -43,8 +43,7 @@ namespace TicTacToe
                     isRunning = false; // end the game loop
                 }
 
-                // change currentPlayer to the opposite (from x to o and vice versa)
-                ChangePlayer();
+                
 
             }
 
@@ -157,7 +156,7 @@ namespace TicTacToe
             static void GetPlayerMove()
             {
                 int move;
-                bool isValidMove = false;
+                bool isValidMove;
 
                 // do while runs atleast once, regardless of the condition
                 do
@@ -173,14 +172,17 @@ namespace TicTacToe
                         // checks for the remainder of the division, which will be the col
                         int col = (move - 1) % 3;
 
-                        if (gameboard[row, col] == currentPlayer)
+                        if (gameboard[row, col] == 'X' || gameboard[row, col] == 'O')
                         {
-                            Console.WriteLine($"DThe field is already occupied with {gameboard[row, col]}.");
+                            Console.WriteLine($"The field is already occupied with {gameboard[row, col]}.");
                             
                         }
                         else
                         {
+                            // set the player to the chosen row and col in the array
                             gameboard[row, col] = currentPlayer;
+                            // change currentPlayer to the opposite (from x to o and vice versa)
+                            ChangePlayer();
                         }
                     }
                     else
@@ -188,7 +190,7 @@ namespace TicTacToe
                         Console.WriteLine($"Invalid move, please enter a correct number between 1-9");
                     }
                 
-                } while (!isValidMove);   
+                } while (!isValidMove);
             }
         }
     }
