@@ -1,0 +1,14 @@
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.AssemblyInfoInputs.cache
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.AssemblyInfo.cs
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.csproj.CoreCompileInputs.cache
+G:\Programmieren\C#\TicTacToe\TicTacToe\bin\Debug\net9.0\TicTacToe.exe
+G:\Programmieren\C#\TicTacToe\TicTacToe\bin\Debug\net9.0\TicTacToe.deps.json
+G:\Programmieren\C#\TicTacToe\TicTacToe\bin\Debug\net9.0\TicTacToe.runtimeconfig.json
+G:\Programmieren\C#\TicTacToe\TicTacToe\bin\Debug\net9.0\TicTacToe.dll
+G:\Programmieren\C#\TicTacToe\TicTacToe\bin\Debug\net9.0\TicTacToe.pdb
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.dll
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\refint\TicTacToe.dll
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.pdb
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\TicTacToe.genruntimeconfig.cache
+G:\Programmieren\C#\TicTacToe\TicTacToe\obj\Debug\net9.0\ref\TicTacToe.dll
