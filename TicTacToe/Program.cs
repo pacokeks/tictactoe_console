@@ -22,8 +22,6 @@ namespace TicTacToe
                 // show the board state
                 ShowBoard();
 
-                ChangePlayer();
-
                 // player move
                 GetPlayerMove();
 
@@ -87,16 +85,16 @@ namespace TicTacToe
             
             static void ChangePlayer()
             {
-                Console.WriteLine($"CurrentPlayer: {currentPlayer}");
+                //Console.WriteLine($"CurrentPlayer: {currentPlayer}"); // Debugging test
                 if (currentPlayer == 'X')
                 {
                     currentPlayer = 'O';
-                    Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}");
+                    //Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}"); // Debugging test
                 }
                 else
                 {
                     currentPlayer = 'X';
-                    Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}");
+                    //Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}"); // Debugging test
                 }
             }
 
@@ -104,7 +102,32 @@ namespace TicTacToe
 
             static bool CheckWinCondition()
             {
-                throw new NotImplementedException();
+                // check win conditions
+                for (int i = 0; i < 3; i++)
+                {
+                    if (CheckRow(i, currentPlayer) || CheckCol(i, currentPlayer)) // checks row and col win conditions
+                    {
+                        return true;
+                    }
+                }
+
+                // checking both diagonal winning possabilities
+                bool diagonal1 = gameboard[0, 0] == currentPlayer && gameboard[1, 1] == currentPlayer && gameboard[2, 2] == currentPlayer;
+                bool diagonal2 = gameboard[0, 2] == currentPlayer && gameboard[1, 1] == currentPlayer && gameboard[2, 0] == currentPlayer;
+
+                return diagonal1 || diagonal2;
+            }
+
+            // checking row win conditions
+            static bool CheckRow(int row, char player)
+            {
+                return gameboard[row, 0] == player && gameboard[row, 1] == player && gameboard[row, 2] == player;
+            }
+
+            // checking col win conditions
+            static bool CheckCol(int col, char player)
+            {
+                return gameboard[0, col] == player && gameboard[1, col] == player && gameboard[2, col] == player;
             }
 
             static bool CheckDraw()
