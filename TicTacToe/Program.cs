@@ -42,9 +42,6 @@ namespace TicTacToe
                     Console.WriteLine($"Wanna play again?");
                     isRunning = false; // end the game loop
                 }
-
-                
-
             }
 
             static void InitializeGameBoard()
@@ -174,15 +171,18 @@ namespace TicTacToe
 
                         if (gameboard[row, col] == 'X' || gameboard[row, col] == 'O')
                         {
-                            Console.WriteLine($"The field is already occupied with {gameboard[row, col]}.");
+                            Console.WriteLine($"The field is already occlupied with {gameboard[row, col]}.");
                             
                         }
                         else
                         {
                             // set the player to the chosen row and col in the array
                             gameboard[row, col] = currentPlayer;
-                            // change currentPlayer to the opposite (from x to o and vice versa)
-                            ChangePlayer();
+                            // change currentPlayer to the opposite (from x to o and vice versa
+                            if (CheckWinCondition() == false) // if the game isn't won / over yet
+                            {
+                                ChangePlayer();
+                            }
                         }
                     }
                     else
