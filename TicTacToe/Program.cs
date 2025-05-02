@@ -13,37 +13,59 @@ namespace TicTacToe
 
         static void Main(String[] args)
         {
-            // initialize the game board
-            InitializeGameBoard();
-
-            // game loop
+            
             bool isRunning = true;
+
+            Console.WriteLine($"Welcome to the TicTacToe console game by pacokeks!");
+            Console.WriteLine($"Have fun!");
+            Console.WriteLine($"");
             while (isRunning)
             {
-                // show the board state
-                ShowBoard();
-
-                // player move
-                GetPlayerMove();
-
-                // check if theres a winner
-                if (CheckWinCondition())
+                // initialize the game board
+                InitializeGameBoard();
+                // game loop
+                while (!CheckWinCondition())
                 {
-                    ShowBoard(); // refresh the board
-                    Console.WriteLine($"Player {currentPlayer} has won! Congratulations!");
-                    Console.WriteLine($"Wanna play again?");
-                    isRunning = false; // end the game loop
-                }
-                // check if its a draw
-                else if (CheckDraw())
-                {
-                    ShowBoard(); // refresh the board
-                    Console.WriteLine($"It's a draw!");
-                    Console.WriteLine($"Wanna play again?");
-                    isRunning = false; // end the game loop
+                    // show the board state
+                    ShowBoard();
+
+                    // player move
+                    GetPlayerMove();
+
+                    // check if theres a winner
+                    if (CheckWinCondition())
+                    {
+                        ShowBoard(); // refresh the board
+                        Console.WriteLine($"Player {currentPlayer} has won! Congratulations!");
+                        if (PlayAgain())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            isRunning = false;
+                        }
+                        //isRunning = false; // end the game loop
+                    }
+                    // check if its a draw
+                    else if (CheckDraw())
+                    {
+                        ShowBoard(); // refresh the board
+                        Console.WriteLine($"It's a draw!");
+                        if (PlayAgain())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            isRunning = false;
+                        }
+                        //isRunning = false; // end the game loop
+                    }
                 }
             }
 
+            Console.WriteLine($"Danke fürs spielen!");
             static void InitializeGameBoard()
             {
                 // set the first char to 1
@@ -96,8 +118,6 @@ namespace TicTacToe
                     //Console.WriteLine($"Changed CurrentPlayer to: {currentPlayer}"); // Debugging test
                 }
             }
-
-            
 
             static bool CheckWinCondition()
             {
@@ -189,9 +209,42 @@ namespace TicTacToe
                     {
                         Console.WriteLine($"Invalid move, please enter a correct number between 1-9");
                     }
-                
                 } while (!isValidMove);
             }
+
+            static bool PlayAgain()
+            {
+                string again = "";
+                bool isEntryValid = false;
+
+                // checking wether the entered string is "yes" or "no"
+                while (!isEntryValid)
+                {
+                    Console.Write($"Wanna play again? Yes / No: ");
+                    again = Console.ReadLine().ToLower();
+
+                    if (again == "yes" || again == "no")
+                    {
+                        isEntryValid = true;
+                    }
+                    else
+                    {
+                        isEntryValid = false;
+                    }
+
+                    // if yes, clear console and play again, no just ends it
+                    switch (again)
+                    {
+                        case "yes":
+                            Console.Clear();
+                            return true;
+                        case "no":
+                            return false;
+                    }
+                }
+                return false;
+            }
+
         }
     }
 }
