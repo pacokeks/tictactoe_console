@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IT-User\\Source\\Repos\\tictactoe_console\\TicTacToe\\TicTacToe.csproj": {}
+    "D:\\Programming\\C#\\tictactoe_console\\TicTacToe\\TicTacToe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IT-User\\Source\\Repos\\tictactoe_console\\TicTacToe\\TicTacToe.csproj": {
+    "D:\\Programming\\C#\\tictactoe_console\\TicTacToe\\TicTacToe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IT-User\\Source\\Repos\\tictactoe_console\\TicTacToe\\TicTacToe.csproj",
+        "projectUniqueName": "D:\\Programming\\C#\\tictactoe_console\\TicTacToe\\TicTacToe.csproj",
         "projectName": "TicTacToe",
-        "projectPath": "C:\\Users\\IT-User\\Source\\Repos\\tictactoe_console\\TicTacToe\\TicTacToe.csproj",
+        "projectPath": "D:\\Programming\\C#\\tictactoe_console\\TicTacToe\\TicTacToe.csproj",
         "packagesPath": "C:\\Users\\IT-User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IT-User\\Source\\Repos\\tictactoe_console\\TicTacToe\\obj\\",
+        "outputPath": "D:\\Programming\\C#\\tictactoe_console\\TicTacToe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

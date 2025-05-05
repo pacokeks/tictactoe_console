@@ -65,7 +65,7 @@ namespace TicTacToe
                 }
             }
 
-            Console.WriteLine($"Danke fürs spielen!");
+            Console.WriteLine($"Thanks for playing!");
             static void InitializeGameBoard()
             {
                 // set the first char to 1
